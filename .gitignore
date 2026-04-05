@@ -1,0 +1,21 @@
+# Environments & Secrets
+.env
+.venv/
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Project Specific Media (DO NOT PUSH VIDEOS/FRAMES)
+temp/
+*.mp4
+*.jpg
+*.png
+*.jpeg
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
