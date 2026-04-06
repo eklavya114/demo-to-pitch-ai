@@ -3,11 +3,7 @@ import subprocess
 import shutil
 import sys
 
-try:
-    import imageio_ffmpeg
-    FFMPEG_EXE = imageio_ffmpeg.get_ffmpeg_exe()
-except ImportError:
-    FFMPEG_EXE = "ffmpeg"
+FFMPEG_EXE = "ffmpeg"
 
 TEMP_DIR = "./temp"
 FRAMES_DIR = os.path.join(TEMP_DIR, "frames")
@@ -34,7 +30,6 @@ def download_video(url: str):
     
     command = [
         sys.executable, "-m", "yt_dlp",
-        "--ffmpeg-location", FFMPEG_EXE,
         "--download-sections", "*00:00:00-00:03:00",
         "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
         "--force-overwrites",

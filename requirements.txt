@@ -3,4 +3,3 @@ yt-dlp
 google-generativeai
 pillow
 python-dotenv
-imageio-ffmpeg
