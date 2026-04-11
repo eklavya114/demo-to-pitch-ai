@@ -33,7 +33,7 @@ def download_video(url: str):
         "--download-sections", "*00:00:00-00:03:00",
         "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
         "--force-overwrites",
-        "--extractor-args", "youtube:player_client=ios,android,web",
+        "--extractor-args", "youtube:player_client=tv,web",
         "--no-check-certificate",
         "--geo-bypass",
         "-o", VIDEO_PATH,
